@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portofolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Elemen semantik: header -->
+    <header>
+        <h1>Muhammad Farrel Rizky</h1>
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="project">Project</a>
+            <a href="kontak">Kontak</a>
+        </nav>
+    </header>
+    <!-- id: elemen unik, berisi foto profil-->
+    <section id="hero">
+        <img src="images.jpg" alt="Foto Profil Muhammad Farrel Rizky">
+        <h2>Mahasiswa Teknik Informatika</h2>
+        <p>Sedang belajar HTML, CSS, dan desain web responsif.</p>
+    </section>
+
+    <main>
+        <section id="tentang">
+            <h2>Tentang saya</h2>
+            <p>
+                Saya mahasiswa Teknik Informatika yang tertarik pada pengembangan
+                website dan desain antarmuka. saat ini saya mempelajari dasar-dasar
+                HTML dan CSS.
+            </p>
+        </section>
+
+        <section id="project">
+            <h2>Project saya</h2>
+            <!--class dipakai berulang untuk 3 card-->
+            <div class="card-wrapper">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>Halaman Profil pribadi sederhana</p>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>Halaman CV dengan external CSS.</p>
+                </div>
+                <div class="card">
+                    <h3>Project 3</h3>
+                    <p>Landing page responsif</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Kontak: internal link, external link, email link-->
+        <section id="kontak">
+            <h2>Kontak</h2>
+            <ul class="kontak-list">
+                <li>
+                    Email:
+                    <a href="mailto:muhammadfarrelrizky@gmail.com">muhammadfarrelrizky@gmail.com</a>
+                </li>
+                <li>
+                    Github:
+                    <a href="https://github.com/farrelrizkyyy">github.com/farrelrizkyyy</a>
+                </li>
+                <li>
+                    LinkedIn:
+                    <a
+                        href="https://www.linkedin.com/in/muhammad-farrel-rizky/">linkedin.com/in/muhammad-farrel-rizky</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!--Elemen semantik: footer-->
+    <footer>
+        <p>&copy; 2026 Muhammad Farrel Rizky</p>
+    </footer>
+</body>
+
+</html>

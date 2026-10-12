@@ -1,0 +1,220 @@
+/* ==========================================
+   1. RESET & BOX MODEL SETUP
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Penerapan Box Model */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ==========================================
+   2. REUSABLE CLASSES
+   ========================================== */
+
+/* Reusable Class 1: .container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Reusable Class 2: .card */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 16px;
+    /* Box Model: Padding internal card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Styling Gambar pada Card */
+.card-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    /* Memastikan gambar terpotong proporsional */
+    border-radius: 8px;
+    margin-bottom: 16px;
+    /* Box Model: Margin di bawah gambar */
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.card h3 {
+    color: #1a365d;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Reusable Class 3: .btn */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #2b6cb0;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1a4971;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #2b6cb0;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e0;
+}
+
+/* ==========================================
+   3. LAYOUT & SECTIONS
+   ========================================== */
+
+/* Header & Navigasi */
+.header {
+    background-color: #1a365d;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #90cdf4;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ebf8ff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    color: #2c5282;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+/* Services Section (Desktop: 3 Kolom) */
+.services {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #1a365d;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: flex;
+    gap: 20px;
+    /* Jarak antar card */
+}
+
+.services-grid .card {
+    flex: 1;
+    /* Membagi 3 kolom sama rata pada desktop */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* ==========================================
+   4. MEDIA QUERY (RESPONSIVE FOR MOBILE)
+   ========================================== */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        /* Mengubah 3 card horizontal menjadi 1 kolom vertikal */
+    }
+
+    .services-grid .card {
+        margin-bottom: 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+}
