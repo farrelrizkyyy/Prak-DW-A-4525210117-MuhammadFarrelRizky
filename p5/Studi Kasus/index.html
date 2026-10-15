@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Toko Online - L Store</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body>
+
+    <!-- Kontrol Interaktif untuk Menampilkan/Menyembunyikan Anotasi -->
+    <input type="checkbox" id="toggle-anotasi" checked>
+    <label for="toggle-anotasi" class="btn-toggle">Tampilkan Anotasi</label>
+
+    <div class="wrapper">
+
+        <!-- HEADER & NAVBAR (Anotasi 1 & 2) -->
+        <header class="site-header" data-anotasi="1" id="beranda">
+            <div class="logo-area">
+                <img src="images\L Store Logo.png" alt="Logo L Store" width="36" height="36">
+                <span>L Store</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Cari produk impianmu...">
+            </div>
+            <div class="user-actions">
+                <a href="#keranjang" class="cart-btn">🛒 Keranjang (0)</a>
+                <a href="#akun" class="btn-action">Masuk</a>
+            </div>
+        </header>
+
+        <nav class="site-nav" data-anotasi="2">
+            <ul>
+                <li><a href="#beranda" class="active">Semua Produk</a></li>
+                <li><a href="#kategori">Kategori</a></li>
+                <li><a href="#promo">Promo Spesial</a></li>
+                <li><a href="#terlaris">Terlaris</a></li>
+                <li><a href="#bantuan">Bantuan</a></li>
+            </ul>
+        </nav>
+
+        <main class="site-content">
+
+            <!-- HERO / BANNER PROMO (Anotasi 3) -->
+            <section class="section hero-section" data-anotasi="3">
+                <div class="hero-text">
+                    <h1>Diskon Spesial Akhir Bulan hingga 50%</h1>
+                    <p>Temukan berbagai produk pilihan terbaik dengan harga paling terjangkau hanya di L Store.</p>
+                    <a href="#produk" class="btn-action">Belanja Sekarang</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/Banner.png" alt="Banner Promo" width="200" height="100">
+                </div>
+            </section>
+
+            <!-- KATEGORI PRODUK (Anotasi 4) -->
+            <section class="section category-section" id="kategori" data-anotasi="4">
+                <h2>Kategori Pilihan</h2>
+                <div class="grid-4">
+                    <div class="category-card">
+                        <img src="images/Elektronik.png" alt="Elektronik" width="40" height="40">
+                        <span>Elektronik</span>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/Pakaian.png" alt="Pakaian" width="40" height="40">
+                        <span>Pakaian Pria & Wanita</span>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/Hobi&Musik.png" alt="Hobi" width="40" height="40">
+                        <span>Hobi & Musik</span>
+                    </div>
+                    <div class="category-card">
+                        <img src="images/Kecantikan.png" alt="Kecantikan" width="40" height="40">
+                        <span>Kecantikan</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KATALOG / DAFTAR PRODUK (Anotasi 5) -->
+            <section class="section product-section" id="produk" data-anotasi="5">
+                <h2>Produk Unggulan</h2>
+                <div class="grid-3">
+                    <article class="product-card">
+                        <img src="images/UBL.png" alt="Produk 1" width="280" height="200">
+                        <h3>Headphone Wireless</h3>
+                        <p class="price">Rp 450.000</p>
+                        <a href="#beli" class="btn-action">Beli Sekarang</a>
+                    </article>
+                    <article class="product-card">
+                        <img src="images/keyboard.png" alt="Produk 2" width="280" height="200">
+                        <h3>Mechanical Keyboard</h3>
+                        <p class="price">Rp 750.000</p>
+                        <a href="#beli" class="btn-action">Beli Sekarang</a>
+                    </article>
+                    <article class="product-card">
+                        <img src="images/Smartwatch.png" alt="Produk 3" width="280" height="200">
+                        <h3>Smartwatch Sport</h3>
+                        <p class="price">Rp 600.000</p>
+                        <a href="#beli" class="btn-action">Beli Sekarang</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- TESTIMONI / ULASAN PELANGGAN (Anotasi 6) -->
+            <section class="section testimonial-section" data-anotasi="6">
+                <h2>Ulasan Pelanggan</h2>
+                <div class="grid-3">
+                    <div class="testi-card">
+                        <p>⭐️⭐️⭐️⭐️⭐️</p>
+                        <p>"Pengiriman cepat dan barang original!"</p>
+                        <span>- Andi, Jakarta</span>
+                    </div>
+                    <div class="testi-card">
+                        <p>⭐️⭐️⭐️⭐️⭐️</p>
+                        <p>"Pelayanan ramah dan kualitas produk sangat baik."</p>
+                        <span>- Siti, Depok</span>
+                    </div>
+                    <div class="testi-card">
+                        <p>⭐️⭐️⭐️⭐️⭐️</p>
+                        <p>"Harga bersaing, bakal langganan terus sih."</p>
+                        <span>- Budi, Bandung</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BANTUAN / INFO PELANGGAN (Anotasi 7) -->
+            <section class="section help-section" id="bantuan" data-anotasi="7">
+                <div class="help-box">
+                    <h2>Butuh Bantuan Belanja?</h2>
+                    <p>Tim customer service L Store siap membantu kendala transaksi Anda 24/7.</p>
+                    <a href="mailto:support@lstore.example" class="btn-outline">Hubungi CS</a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER (Anotasi 8) -->
+        <footer class="site-footer" data-anotasi="8">
+            <div class="footer-col">
+                <h4>L Store</h4>
+                <p>Platform belanja online terpercaya, aman, dan lengkap.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Metode Pembayaran</h4>
+                <p>Transfer Bank, E-Wallet, COD</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 L Store. Hak cipta dilindungi.</p>
+            </div>
+        </footer>
+
+        <!-- PANEL LEGENDA ANOTASI -->
+        <section class="legend-panel">
+            <h2>Legenda Anotasi Wireframe L Store</h2>
+            <ol>
+                <li><strong>Header</strong>: Identitas toko, kolom pencarian produk (*search bar*), dan tombol keranjang
+                    serta akun.</li>
+                <li><strong>Navbar</strong>: Menu navigasi utama untuk kategori dan halaman penting toko.</li>
+                <li><strong>Hero / Banner Promo</strong>: Area sorotan utama untuk diskon, banner kampanye, dan CTA
+                    belanja.</li>
+                <li><strong>Kategori Produk</strong>: Akses cepat ke berbagai pilihan departemen atau kategori barang.
+                </li>
+                <li><strong>Katalog Produk</strong>: Grid kartu produk yang memuat gambar, judul, harga, dan tombol
+                    beli.</li>
+                <li><strong>Ulasan Pelanggan</strong>: Bagian testimoni untuk membangun kepercayaan (*social proof*).
+                </li>
+                <li><strong>Bantuan</strong>: Pusat informasi bantuan atau layanan pelanggan (*Customer Service*).</li>
+                <li><strong>Footer</strong>: Informasi penutup, metode pembayaran, dan hak cipta.</li>
+            </ol>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
