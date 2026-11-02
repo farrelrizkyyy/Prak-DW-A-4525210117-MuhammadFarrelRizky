@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pesan menu favorit Kaciw Resto secara online." />
+    <title>Pesan Makanan | Kaciw Resto</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="inner-page">
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">KR</span>
+                <span class="brand-copy"><strong>Kaciw Resto</strong><small>Rasa yang punya cerita</small></span>
+            </a>
+            <nav class="nav-menu" aria-label="Navigasi utama">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang</a>
+                <a href="facility.html">Fasilitas</a>
+                <a href="services.html">Layanan</a>
+                <a class="active" href="order.html">Pesan Makanan</a>
+                <a href="services.html#kontak">Kontak</a>
+            </nav>
+            <a class="nav-cta active" href="order.html">Pesan Makanan <span>↗</span></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow"><span></span> Form Pemesanan</p>
+                <h1>Pesan kelezatan untuk <em>momen terbaikmu.</em></h1>
+                <p>Pilih menu favoritmu, isi detail pemesanan, dan kami akan segera menyiapkannya dengan hangat.</p>
+            </div>
+        </section>
+
+        <section class="section content">
+            <div class="container" style="max-width: 720px;">
+                <div class="section-heading centered">
+                    <p class="eyebrow"><span></span> Formulir Online <span></span></p>
+                    <h2>Formulir Pesan Makanan</h2>
+                    <p>Silakan lengkapi data diri dan pilihan menu di bawah ini.</p>
+                </div>
+
+                <form action="#" method="POST"
+                    style="background: white; padding: 40px; border: 1px solid var(--line); box-shadow: var(--shadow);">
+
+                    <!-- 1. Nama Pelanggan -->
+                    <div style="margin-bottom: 24px;">
+                        <label for="nama"
+                            style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.85rem;">Nama
+                            Pelanggan</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required
+                            style="width: 100%; padding: 12px; border: 1px solid var(--line); font-family: inherit; font-size: 0.9rem;" />
+                    </div>
+
+                    <!-- 2. Email Pelanggan -->
+                    <div style="margin-bottom: 24px;">
+                        <label for="email"
+                            style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.85rem;">Email
+                            Pelanggan</label>
+                        <input type="email" id="email" name="email" placeholder="nama@email.com" required
+                            style="width: 100%; padding: 12px; border: 1px solid var(--line); font-family: inherit; font-size: 0.9rem;" />
+                    </div>
+
+                    <!-- 3. Nomor Telepon Pelanggan -->
+                    <div style="margin-bottom: 24px;">
+                        <label for="telepon"
+                            style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.85rem;">Nomor
+                            Telepon Pelanggan</label>
+                        <input type="tel" id="telepon" name="telepon" placeholder="Contoh: 081234567890" required
+                            style="width: 100%; padding: 12px; border: 1px solid var(--line); font-family: inherit; font-size: 0.9rem;" />
+                    </div>
+
+                    <!-- 4. Pilihan Menu (Menu 1, Menu 2, dst) -->
+                    <div style="margin-bottom: 24px;">
+                        <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.85rem;">Pilihan
+                            Menu</label>
+                        <div style="display: grid; gap: 12px; margin-top: 10px;">
+                            <label
+                                style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; cursor: pointer;">
+                                <input type="checkbox" name="menu" value="Nasi Rempah Kaciw"
+                                    style="accent-color: var(--green);" />
+                                <strong>Menu 1: Nasi Rempah Kaciw</strong> — Rp 48.000
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; cursor: pointer;">
+                                <input type="checkbox" name="menu" value="Soto Rumah"
+                                    style="accent-color: var(--green);" />
+                                <strong>Menu 2: Soto Rumah</strong> — Rp 35.000
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; cursor: pointer;">
+                                <input type="checkbox" name="menu" value="Pisang Bakar Gula Aren"
+                                    style="accent-color: var(--green);" />
+                                <strong>Menu 3: Pisang Bakar Gula Aren</strong> — Rp 28.000
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 5. Input Tambahan Kreatif -->
+                    <div style="margin-bottom: 24px;">
+                        <label for="catatan"
+                            style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.85rem;">Catatan
+                            Tambahan / Permintaan Khusus</label>
+                        <textarea id="catatan" name="catatan" rows="4"
+                            placeholder="Contoh: Tingkat kepedasan, alergi makanan, nomor meja, atau waktu kedatangan..."
+                            style="width: 100%; padding: 12px; border: 1px solid var(--line); font-family: inherit; font-size: 0.9rem; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="button button-primary"
+                        style="width: 100%; cursor: pointer; border: none;">
+                        Kirim Pesanan Sekarang <span>→</span>
+                    </button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">KR</span>
+                <span class="brand-copy"><strong>Kaciw Resto</strong><small>Rasa yang punya cerita</small></span>
+            </a>
+            <p>© 2026 Kaciw Resto. Dibuat dengan rasa.</p>
+            <div class="footer-links">
+                <a href="about.html">Tentang</a>
+                <a href="facility.html">Fasilitas</a>
+                <a href="services.html">Layanan</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

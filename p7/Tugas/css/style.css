@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+
+:root {
+    --ink: #1c2824;
+    --muted: #78817b;
+    --cream: #f7f5ef;
+    --paper: #fffdf8;
+    --green: #1f493d;
+    --green-dark: #12372f;
+    --gold: #d7a64b;
+    --line: #dfe2d9;
+    --shadow: 0 20px 45px rgba(26, 46, 39, 0.11);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+h1 em {
+    color: var(--gold);
+    font-style: normal;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 15px;
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.eyebrow span {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: currentColor;
+}
+
+.site-header {
+    background: var(--green-dark);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+    color: white;
+}
+
+.brand-mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.brand-copy {
+    display: grid;
+    line-height: 1.15;
+}
+
+.brand-copy strong {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+}
+
+.brand-copy small {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.page-hero {
+    padding: 80px 0;
+    color: white;
+    background: var(--green);
+    text-align: center;
+}
+
+.page-hero p {
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.centered {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.centered .eyebrow {
+    justify-content: center;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--gold);
+}
