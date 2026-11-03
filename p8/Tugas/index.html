@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran Kursus Online</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="form-card">
+        <header class="form-header">
+          <span class="label-top"> PENDAFTARAN KURSUS </span>
+          <h1>Form Pendaftaran Kursus</h1>
+          <p>Lengkapi data diri dan unggah bukti pembayaran untuk mendaftar.</p>
+          <p class="required-info">* Wajib diisi</p>
+        </header>
+
+        <form
+          action="/proses-pendaftaran"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="nama"> Nama Lengkap * </label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              minlength="3"
+              maxlength="60"
+              placeholder="Contoh: Farrel Rizky"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email"> Alamat Email * </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="farrel@gmail.com"
+              required
+            />
+            <small>Konfirmasi pendaftaran akan dikirim ke email ini.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="telepon"> Nomor WhatsApp * </label>
+            <input
+              type="text"
+              id="telepon"
+              name="telepon"
+              pattern="[0-9]{10,13}"
+              minlength="10"
+              maxlength="13"
+              placeholder="Contoh: 081512347890"
+              required
+            />
+            <small>Masukkan 10-13 digit angka saja tanpa spasi/karakter khusus.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="kursus"> Pilih Program Kursus * </label>
+            <select id="kursus" name="kursus" required>
+              <option value="">-- Pilih Kursus --</option>
+              <option value="web-dev">Web Development Masterclass</option>
+              <option value="ui-ux">UI/UX Design Intensive</option>
+              <option value="data-science">Data Science Fundamentals</option>
+              <option value="cyber-security">Cyber Security Essentials</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Pilihan Jadwal Kelas *</legend>
+            <div class="option">
+              <input
+                type="radio"
+                id="reguler"
+                name="jadwal"
+                value="reguler"
+                required
+              />
+              <label for="reguler">Kelas Reguler (Senin - Rabu, 19.00 WIB)</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                id="weekend"
+                name="jadwal"
+                value="weekend"
+              />
+              <label for="weekend">Kelas Weekend (Sabtu - Minggu, 10.00 WIB)</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Modul Tambahan (Opsional)</legend>
+            <p class="instruction">Pilih materi tambahan yang ingin diambil:</p>
+            <div class="option">
+              <input type="checkbox" id="git" name="modul_tambahan[]" value="git" />
+              <label for="git">Git & GitHub Mastery</label>
+            </div>
+            <div class="option">
+              <input type="checkbox" id="english" name="modul_tambahan[]" value="english" />
+              <label for="english">English for IT Professional</label>
+            </div>
+            <div class="option">
+              <input type="checkbox" id="career" name="modul_tambahan[]" value="career" />
+              <label for="career">Career Mentoring & CV Review</label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="catatan"> Motivasi / Catatan Khusus * </label>
+            <textarea
+              id="catatan"
+              name="catatan"
+              rows="5"
+              minlength="20"
+              maxlength="300"
+              placeholder="Tuliskan harapan atau alasan Anda mengikuti kursus ini..."
+              required
+            ></textarea>
+            <small> Tuliskan minimal 20 karakter dan maksimal 300 karakter. </small>
+          </div>
+
+          <div class="form-group">
+            <label for="bukti_pembayaran"> Upload Bukti Pembayaran * </label>
+            <input
+              type="file"
+              id="bukti_pembayaran"
+              name="bukti_pembayaran"
+              accept=".jpg,.jpeg,.png"
+              required
+            />
+            <small> Format yang diterima: JPG atau PNG. </small>
+          </div>
+
+          <div class="agreement">
+            <input
+              type="checkbox"
+              id="persetujuan"
+              name="persetujuan"
+              value="setuju"
+              required
+            />
+            <label for="persetujuan">
+              Saya menyetujui syarat dan ketentuan pendaftaran kursus. *
+            </label>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" class="btn btn-primary">Daftar Kursus</button>
+
+            <button type="reset" class="btn btn-secondary">Bersihkan Form</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
