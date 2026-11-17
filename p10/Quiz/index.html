@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmoni Senja Fest 2026</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS ditempatkan setelah Bootstrap -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#beranda">
+          <span class="brand-sun" aria-hidden="true"></span>
+          Harmoni Senja Fest
+        </a>
+        <!-- Tombol collapse (hamburger) pada ponsel -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuUtama"
+          aria-controls="menuUtama"
+          aria-expanded="false"
+          aria-label="Buka navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="menuUtama">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#beranda">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lineup">Line-Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tiket">Tiket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======================== HERO ======================== -->
+    <header id="beranda" class="hero-section py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Text -->
+          <div class="col-12 col-lg-6">
+            <span class="badge custom-badge mb-3">FESTIVAL MUSIK TAHUNAN</span>
+            <h1 class="display-5 fw-bold">
+              Harmoni Senja Fest <span class="text-gradient">2026</span>
+            </h1>
+            <p class="lead hero-lead">
+              Satu hari penuh musik, cahaya, dan kebersamaan di bawah langit
+              senja.
+            </p>
+            <ul class="list-unstyled hero-info">
+              <li><strong>Tanggal:</strong> Sabtu, 12 Desember 2026</li>
+              <li><strong>Lokasi:</strong> Lapangan Senayan Timur, Jakarta</li>
+              <li><strong>Waktu:</strong> 15.00 WIB &ndash; selesai</li>
+            </ul>
+            <div class="d-flex flex-column flex-sm-row gap-2">
+              <!-- Button membuka modal -->
+              <button
+                class="btn btn-brand btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#modalTiket"
+                data-tiket="Tiket Festival"
+              >
+                Beli Tiket Sekarang
+              </button>
+              <a href="#lineup" class="btn btn-outline-brand btn-lg">
+                Lihat Line-Up
+              </a>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="col-12 col-lg-6">
+            <img
+              src="img\konser.png"
+              alt="Ilustrasi panggung konser dengan lampu sorot dan penonton saat senja"
+              class="img-fluid rounded-4 hero-img"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================== ALERT ======================== -->
+    <section class="container mt-4">
+      <div
+        class="alert custom-alert alert-dismissible fade show"
+        role="alert"
+      >
+        <strong>Early Bird:</strong>
+        Kuota 500 tiket pertama dengan harga spesial! Pintu gerbang
+        (open gate) dibuka pukul 14.00 WIB.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Tutup"
+        ></button>
+      </div>
+    </section>
+
+    <!-- ======================== LINE-UP ======================== -->
+    <section id="lineup" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">LINE-UP</span>
+          <h2 class="fw-bold">Penampil Utama</h2>
+          <p class="section-sub">
+            Tiga penampil utama yang akan menemani senja kalian.
+          </p>
+        </div>
+        <!-- Grid responsif: 1 kolom (HP) menjadi 3 kolom (laptop) -->
+        <div class="row g-4">
+          <div class="col-12 col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <div class="feature-number">01</div>
+                <h3 class="h5 card-title mt-3">Juicy Luicy</h3>
+                <p class="card-meta">Pop &bull; 16.00 WIB</p>
+                <p class="card-text">
+                  Nuansa syahdu dan santai yang sangat pas dibawakan saat sore hari.
+                </p>
+                <button
+                  class="btn btn-outline-brand btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTiket"
+                  data-tiket="Tiket Festival"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <div class="feature-number">02</div>
+                <h3 class="h5 card-title mt-3">Ungu</h3>
+                <p class="card-meta">Pop Rock &bull; 18.00 WIB</p>
+                <p class="card-text">
+                  Kerinduan yang pas dengan transisi siang ke malam.
+                </p>
+                <button
+                  class="btn btn-outline-brand btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTiket"
+                  data-tiket="Tiket Festival"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <div class="feature-number">03</div>
+                <h3 class="h5 card-title mt-3">Sheila On 7</h3>
+                <p class="card-meta">Pop &bull; 20.00 WIB</p>
+                <p class="card-text">
+                  Penutup penuh energi dengan lampu dan gema yang megah.
+                </p>
+                <button
+                  class="btn btn-outline-brand btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTiket"
+                  data-tiket="Tiket Festival"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TIKET ======================== -->
+    <section id="tiket" class="ticket-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">TIKET</span>
+          <h2 class="fw-bold">Pilih Kategori Tiketmu</h2>
+          <p class="section-sub">
+            Tersedia tiga kategori sesuai pengalaman yang kamu inginkan.
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Festival -->
+          <div class="col-12 col-lg-4">
+            <div class="card ticket-card h-100">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h4 card-title">Festival</h3>
+                <p class="ticket-price">Rp 350.000</p>
+                <ul class="ticket-list list-unstyled">
+                  <li>Akses area festival (standing)</li>
+                  <li>Akses semua penampil</li>
+                  <li>Gelang tangan eksklusif</li>
+                </ul>
+                <button
+                  class="btn btn-outline-brand mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTiket"
+                  data-tiket="Tiket Festival"
+                >
+                  Beli Tiket
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- VIP -->
+          <div class="col-12 col-lg-4">
+            <div class="card ticket-card ticket-featured h-100">
+              <span class="ticket-ribbon">PALING POPULER</span>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h4 card-title">VIP</h3>
+                <p class="ticket-price">Rp 750.000</p>
+                <ul class="ticket-list list-unstyled">
+                  <li>Area VIP dekat panggung</li>
+                  <li>Lounge dengan tempat duduk</li>
+                  <li>Welcome drink &amp; merchandise</li>
+                </ul>
+                <button
+                  class="btn btn-brand mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTiket"
+                  data-tiket="Tiket VIP"
+                >
+                  Beli Tiket
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- VVIP -->
+          <div class="col-12 col-lg-4">
+            <div class="card ticket-card h-100">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h4 card-title">VVIP</h3>
+                <p class="ticket-price">Rp 1.500.000</p>
+                <ul class="ticket-list list-unstyled">
+                  <li>Area terdepan &amp; jalur masuk khusus</li>
+                  <li>Makan malam &amp; minuman bebas</li>
+                  <li>Sesi meet &amp; greet penampil</li>
+                </ul>
+                <button
+                  class="btn btn-outline-brand mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTiket"
+                  data-tiket="Tiket VVIP"
+                >
+                  Beli Tiket
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== KONTAK ======================== -->
+    <section id="kontak" class="py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-12 col-lg-5">
+            <span class="section-label">KONTAK</span>
+            <h2 class="fw-bold">Ada Pertanyaan?</h2>
+            <p class="section-sub">
+              Tanyakan seputar tiket, jadwal, atau akses lokasi. Panitia akan
+              membalas dalam 1&times;24 jam.
+            </p>
+            <p class="mb-1"><strong>Email:</strong> harmonisenja@gmail.com</p>
+            <p><strong>WhatsApp:</strong> 0812-3456-7890</p>
+          </div>
+          <div class="col-12 col-lg-7">
+            <form id="formKontak" class="contact-form" novalidate>
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  placeholder="Masukkan nama kamu"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="nama@gmail.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pertanyaan</label>
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  rows="4"
+                  placeholder="Tulis pertanyaanmu di sini"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-brand btn-lg w-100">
+                Kirim Pertanyaan
+              </button>
+              <div
+                id="pesanTerkirim"
+                class="alert alert-success mt-3 mb-0 d-none"
+                role="status"
+              >
+                Terima kasih! Pertanyaanmu sudah kami terima.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="custom-footer py-4">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+        >
+          <p class="mb-0">&copy; 2026 Harmoni Senja Fest. Hak cipta dilindungi.</p>
+          <ul class="list-inline social-links mb-0">
+            <li class="list-inline-item">
+              <a href="https://instagram.com/harmonisenjafest" target="_blank" rel="noopener">Instagram</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://tiktok.com/@harmonisenjafest" target="_blank" rel="noopener">TikTok</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://youtube.com/@harmonisenjafest" target="_blank" rel="noopener">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================== MODAL ======================== -->
+    <div
+      class="modal fade"
+      id="modalTiket"
+      tabindex="-1"
+      aria-labelledby="judulModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="judulModal">
+              Syarat &amp; Ketentuan &ndash; <span id="namaTiket">Tiket Festival</span>
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Harap baca ketentuan masuk area konser berikut:</p>
+            <ol class="ps-3">
+              <li>Wajib membawa e-tiket dan kartu identitas yang valid.</li>
+              <li>Tiket yang sudah dibeli tidak dapat dikembalikan.</li>
+              <li>Dilarang membawa senjata tajam, obat terlarang, dan minuman beralkohol dari luar.</li>
+              <li>Anak di bawah 12 tahun wajib didampingi orang dewasa.</li>
+              <li>Panitia berhak menolak masuk pengunjung yang melanggar aturan.</li>
+            </ol>
+            <div class="alert alert-warning mb-0">
+              Open gate pukul 14.00 WIB. Datang lebih awal untuk menghindari antrean.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button
+              type="button"
+              class="btn btn-brand"
+              data-bs-dismiss="modal"
+              id="btnKonfirmasi"
+            >
+              Saya Setuju &amp; Lanjutkan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle: sudah termasuk JavaScript dan Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Isi nama tiket pada modal sesuai tombol yang diklik
+      const modalTiket = document.getElementById("modalTiket");
+      modalTiket.addEventListener("show.bs.modal", (e) => {
+        const tiket = e.relatedTarget?.getAttribute("data-tiket");
+        if (tiket) document.getElementById("namaTiket").textContent = tiket;
+      });
+
+      // Form kontak: tampilkan pesan terkirim (simulasi)
+      document.getElementById("formKontak").addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!e.target.checkValidity()) {
+          e.target.reportValidity();
+          return;
+        }
+        document.getElementById("pesanTerkirim").classList.remove("d-none");
+        e.target.reset();
+      });
+    </script>
+  </body>
+</html>
